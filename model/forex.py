@@ -64,3 +64,13 @@ def get_universal_currency(temp_folder_path):
         json.dump(data, json_tmp_file, indent=4)
         print("temp json currencies file created")
     
+
+def getCurrencies(temp_folder_path) -> dict:
+    data = {}
+    
+    # initializing the json temp file path 
+    temp_path = f"{temp_folder_path}/currencies.json"
+    with open(temp_path, 'r') as json_file:
+        data = json.load(json_file)
+    
+    return data

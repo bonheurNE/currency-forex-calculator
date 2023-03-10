@@ -115,6 +115,7 @@ class Ui_currency_mode_widget(object):
 
         self.currency_country_combo_2 = QComboBox(self.currency_convertion_frame)
         self.currency_country_combo_2.setObjectName(u"currency_country_combo_2")
+        self.currency_country_combo_2.setStyleSheet(u"color:lightgrey;")
         self.currency_country_combo_2.setMinimumSize(QSize(0, 30))
         font = QFont()
         font.setFamilies([u"Arial"])
@@ -147,21 +148,21 @@ class Ui_currency_mode_widget(object):
 
         self.gridLayout_7.addWidget(self.currency_convertion_rate_label, 6, 0, 1, 1)
 
-        self.currency_symbole_1 = QLabel(self.currency_convertion_frame)
-        self.currency_symbole_1.setObjectName(u"currency_symbole_1")
+        self.currency_symbol_1 = QLabel(self.currency_convertion_frame)
+        self.currency_symbol_1.setObjectName(u"currency_symbol_1")
         font3 = QFont()
         font3.setPointSize(20)
-        self.currency_symbole_1.setFont(font3)
-        self.currency_symbole_1.setScaledContents(True)
+        self.currency_symbol_1.setFont(font3)
+        self.currency_symbol_1.setScaledContents(True)
 
-        self.gridLayout_7.addWidget(self.currency_symbole_1, 0, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.currency_symbol_1, 0, 0, 1, 1)
 
-        self.currency_symbole_2 = QLabel(self.currency_convertion_frame)
-        self.currency_symbole_2.setObjectName(u"currency_symbole_2")
-        self.currency_symbole_2.setFont(font3)
-        self.currency_symbole_2.setScaledContents(True)
+        self.currency_symbol_2 = QLabel(self.currency_convertion_frame)
+        self.currency_symbol_2.setObjectName(u"currency_symbol_2")
+        self.currency_symbol_2.setFont(font3)
+        self.currency_symbol_2.setScaledContents(True)
 
-        self.gridLayout_7.addWidget(self.currency_symbole_2, 3, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.currency_symbol_2, 3, 0, 1, 1)
 
         self.first_devise_label = QLabel(self.currency_convertion_frame)
         self.first_devise_label.setObjectName(u"first_devise_label")
@@ -172,6 +173,7 @@ class Ui_currency_mode_widget(object):
 
         self.currency_country_combo_1 = QComboBox(self.currency_convertion_frame)
         self.currency_country_combo_1.setObjectName(u"currency_country_combo_1")
+        self.currency_country_combo_1.setStyleSheet(u"color:lightgrey;")
         self.currency_country_combo_1.setMinimumSize(QSize(0, 30))
         self.currency_country_combo_1.setFont(font)
 
@@ -333,8 +335,8 @@ class Ui_currency_mode_widget(object):
         self.currency_title.setText(QCoreApplication.translate("currency_mode_widget", u"<html><head/><body><p align=\"right\"><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Currency Convertion</span></p></body></html>", None))
         self.second_devise_label.setText(QCoreApplication.translate("currency_mode_widget", u"0", None))
         self.currency_convertion_rate_label.setText(QCoreApplication.translate("currency_mode_widget", u"Convertion Rate", None))
-        self.currency_symbole_1.setText(QCoreApplication.translate("currency_mode_widget", u"$", None))
-        self.currency_symbole_2.setText(QCoreApplication.translate("currency_mode_widget", u"$", None))
+        self.currency_symbol_1.setText(QCoreApplication.translate("currency_mode_widget", u"$", None))
+        self.currency_symbol_2.setText(QCoreApplication.translate("currency_mode_widget", u"$", None))
         self.first_devise_label.setText(QCoreApplication.translate("currency_mode_widget", u"0", None))
         self.currency_btn4.setText(QCoreApplication.translate("currency_mode_widget", u"4", None))
         self.currency_btn7.setText(QCoreApplication.translate("currency_mode_widget", u"7", None))

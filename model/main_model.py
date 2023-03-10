@@ -18,3 +18,8 @@ def softwareFolderCreation():
 # function to create available contries with they currency code json file
 def createAvailableCurrencyFiles(temp_dir):
     forex.get_universal_currency(temp_dir)
+    
+# function to get all available currencies and they countries
+def getCurrenciesData(temp_dir):
+    data = forex.getCurrencies(temp_dir)
+    return data
