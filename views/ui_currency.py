@@ -18,13 +18,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
     QHBoxLayout, QLabel, QPushButton, QSizePolicy,
     QSpacerItem, QWidget)
-from model.icon import icon_rc
+from model.icons import icon_rc
 
 class Ui_currency_mode_widget(object):
     def setupUi(self, currency_mode_widget):
         if not currency_mode_widget.objectName():
             currency_mode_widget.setObjectName(u"currency_mode_widget")
-        currency_mode_widget.resize(457, 648)
+            currency_mode_widget.setStyleSheet(u"background-color:#2c2f32;")
+        currency_mode_widget.resize(457, 568)
         self.gridLayout = QGridLayout(currency_mode_widget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.currency_title_frame = QFrame(currency_mode_widget)
@@ -38,10 +39,10 @@ class Ui_currency_mode_widget(object):
 "border:1px solid darkgrey;\n"
 "}\n"
 "QLabel{\n"
-"color:skyblue;}\n"
+"color:#00ffff;}\n"
 "QLabel:hover{\n"
 "color:rgb(0, 85, 127);\n"
-"border:2px solid rgb(0, 58, 0);\n"
+"border:2px solid #ff8000;\n"
 "	border-top-color: transparent;\n"
 "border-right-color: transparent;\n"
 "border-left-color: transparent;\n"
@@ -55,8 +56,7 @@ class Ui_currency_mode_widget(object):
         self.currency_title_icon = QPushButton(self.currency_title_frame)
         self.currency_title_icon.setObjectName(u"currency_title_icon")
         icon = QIcon()
-        icon.addFile(u"model/icon/MANAS_ICON.png",
-                     QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/MANAS_ICON.png", QSize(), QIcon.Normal, QIcon.Off)
         self.currency_title_icon.setIcon(icon)
         self.currency_title_icon.setIconSize(QSize(80, 80))
 
@@ -123,20 +123,20 @@ class Ui_currency_mode_widget(object):
 
         self.gridLayout_7.addWidget(self.currency_country_combo_2, 4, 0, 1, 2)
 
-        self.label_7 = QLabel(self.currency_convertion_frame)
-        self.label_7.setObjectName(u"label_7")
+        self.second_devise_label = QLabel(self.currency_convertion_frame)
+        self.second_devise_label.setObjectName(u"second_devise_label")
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
-        self.label_7.setSizePolicy(sizePolicy1)
-        self.label_7.setMinimumSize(QSize(0, 60))
+        sizePolicy1.setHeightForWidth(self.second_devise_label.sizePolicy().hasHeightForWidth())
+        self.second_devise_label.setSizePolicy(sizePolicy1)
+        self.second_devise_label.setMinimumSize(QSize(0, 60))
         font1 = QFont()
         font1.setPointSize(40)
         font1.setBold(False)
-        self.label_7.setFont(font1)
+        self.second_devise_label.setFont(font1)
 
-        self.gridLayout_7.addWidget(self.label_7, 3, 1, 1, 1)
+        self.gridLayout_7.addWidget(self.second_devise_label, 3, 1, 1, 1)
 
         self.currency_convertion_rate_label = QLabel(self.currency_convertion_frame)
         self.currency_convertion_rate_label.setObjectName(u"currency_convertion_rate_label")
@@ -163,12 +163,12 @@ class Ui_currency_mode_widget(object):
 
         self.gridLayout_7.addWidget(self.currency_symbole_2, 3, 0, 1, 1)
 
-        self.label_5 = QLabel(self.currency_convertion_frame)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setMinimumSize(QSize(0, 60))
-        self.label_5.setFont(font1)
+        self.first_devise_label = QLabel(self.currency_convertion_frame)
+        self.first_devise_label.setObjectName(u"first_devise_label")
+        self.first_devise_label.setMinimumSize(QSize(0, 60))
+        self.first_devise_label.setFont(font1)
 
-        self.gridLayout_7.addWidget(self.label_5, 0, 1, 1, 1, Qt.AlignLeft)
+        self.gridLayout_7.addWidget(self.first_devise_label, 0, 1, 1, 1, Qt.AlignLeft)
 
         self.currency_country_combo_1 = QComboBox(self.currency_convertion_frame)
         self.currency_country_combo_1.setObjectName(u"currency_country_combo_1")
@@ -263,7 +263,7 @@ class Ui_currency_mode_widget(object):
         self.currency_btn_delete.setFont(font4)
         self.currency_btn_delete.setStyleSheet(u"background-color:rgb(19, 19, 19);")
         icon1 = QIcon()
-        icon1.addFile(u":/icon/delete.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/icons/delete.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.currency_btn_delete.setIcon(icon1)
         self.currency_btn_delete.setIconSize(QSize(22, 22))
 
@@ -331,11 +331,11 @@ class Ui_currency_mode_widget(object):
         currency_mode_widget.setWindowTitle(QCoreApplication.translate("currency_mode_widget", u"Form", None))
         self.currency_title_icon.setText("")
         self.currency_title.setText(QCoreApplication.translate("currency_mode_widget", u"<html><head/><body><p align=\"right\"><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Currency Convertion</span></p></body></html>", None))
-        self.label_7.setText(QCoreApplication.translate("currency_mode_widget", u"0", None))
+        self.second_devise_label.setText(QCoreApplication.translate("currency_mode_widget", u"0", None))
         self.currency_convertion_rate_label.setText(QCoreApplication.translate("currency_mode_widget", u"Convertion Rate", None))
         self.currency_symbole_1.setText(QCoreApplication.translate("currency_mode_widget", u"$", None))
         self.currency_symbole_2.setText(QCoreApplication.translate("currency_mode_widget", u"$", None))
-        self.label_5.setText(QCoreApplication.translate("currency_mode_widget", u"0", None))
+        self.first_devise_label.setText(QCoreApplication.translate("currency_mode_widget", u"0", None))
         self.currency_btn4.setText(QCoreApplication.translate("currency_mode_widget", u"4", None))
         self.currency_btn7.setText(QCoreApplication.translate("currency_mode_widget", u"7", None))
         self.currency_btn9.setText(QCoreApplication.translate("currency_mode_widget", u"9", None))

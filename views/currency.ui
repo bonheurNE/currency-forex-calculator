@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>457</width>
-    <height>648</height>
+    <height>568</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -63,7 +63,7 @@ border-left-color: transparent;
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../model/icon/icon.qrc">
+         <iconset resource="../../model/icon/icon.qrc">
           <normaloff>:/icons/MANAS_ICON.png</normaloff>:/icons/MANAS_ICON.png</iconset>
         </property>
         <property name="iconSize">
@@ -199,7 +199,7 @@ color:rgb(255, 255, 255);
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="second_devise_label">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -268,7 +268,7 @@ color:rgb(255, 255, 255);
        </widget>
       </item>
       <item row="0" column="1" alignment="Qt::AlignLeft">
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="first_devise_label">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -532,7 +532,7 @@ background-color:rgb(73, 73, 73);
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../model/icon/icon.qrc">
+         <iconset resource="../../model/icon/icon.qrc">
           <normaloff>:/icons/delete.svg</normaloff>:/icons/delete.svg</iconset>
         </property>
         <property name="iconSize">
@@ -702,7 +702,7 @@ background-color:rgb(73, 73, 73);
   </layout>
  </widget>
  <resources>
-  <include location="../model/icon/icon.qrc"/>
+  <include location="../../model/icon/icon.qrc"/>
  </resources>
  <connections/>
 </ui>
