@@ -74,3 +74,43 @@ def getCurrencies(temp_folder_path) -> dict:
         data = json.load(json_file)
     
     return data
+
+        
+def getConversion(amount:int|float = 0, from_c:str="",to_c:str="") -> tuple:
+    from_currency = from_c
+    to_currency =  to_c
+    amount = amount
+    
+    if to_currency and from_currency:
+        url = f"https://www.xe.com/currencyconverter/convert/?Amount={amount}&From={from_currency}&To={to_currency}"
+        response = requests.get(url)
+
+        soup = BeautifulSoup(response.content, "html.parser")
+
+        rate = soup.find(
+            "div", class_="unit-rates___StyledDiv-sc-1dk593y-0 dEqdnx")
+        
+        rates = rate.find_all("p")
+        
+        
+        from_to_rate = rates[0]
+        to_from_rate = rates[1]
+        
+        to_from_rate = to_from_rate.text
+        from_to_rate = from_to_rate.text
+
+        f_amount = soup.find(
+            "p", class_="result__BigRate-sc-1bsijpp-1 iGrAod")
+        f_amount = f_amount.text
+        f_amount = f_amount.split()
+        f_amount = f_amount[0]
+        
+        
+        print(f"{from_to_rate}\n{to_from_rate}\nconverted amount : {f_amount} ")
+        return (from_to_rate,to_from_rate,f_amount)
+    else:
+        print(f"scripts abort \n'{to_currency}' not a valid currency code") 
+        return ("","","0")
+        pass
+        
+    

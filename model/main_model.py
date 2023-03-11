@@ -23,3 +23,7 @@ def createAvailableCurrencyFiles(temp_dir):
 def getCurrenciesData(temp_dir):
     data = forex.getCurrencies(temp_dir)
     return data
+
+def convertForex(amount:int|float = 0, from_c:str="",to_c:str="") -> tuple:
+    data = forex.getConversion(amount=amount, from_c=from_c, to_c=to_c)
+    return data
